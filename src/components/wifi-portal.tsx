@@ -53,8 +53,8 @@ export function WifiPortal() {
         </div>
 
         {/* Form card */}
-        <div className="w-full max-w-md bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8">
-          <h2 className="text-white text-center text-lg font-semibold uppercase tracking-wider mb-6">
+        <div className="w-full max-w-lg bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-10">
+          <h2 className="text-white text-center text-xl font-semibold uppercase tracking-wider mb-8">
             Đăng ký WiFi
           </h2>
 
@@ -64,7 +64,7 @@ export function WifiPortal() {
                 {...register("name")}
                 aria-label="Họ và tên"
                 placeholder="Họ và tên *"
-                className="w-full px-4 py-3 bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-5 py-4 text-base bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
               />
               {errors.name && (
                 <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
@@ -76,7 +76,7 @@ export function WifiPortal() {
                 {...register("email")}
                 aria-label="Email"
                 placeholder="Email *"
-                className="w-full px-4 py-3 bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-5 py-4 text-base bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
               />
               {errors.email && (
                 <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
@@ -88,7 +88,7 @@ export function WifiPortal() {
                 {...register("phone")}
                 aria-label="Số điện thoại"
                 placeholder="Số điện thoại *"
-                className="w-full px-4 py-3 bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-5 py-4 text-base bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
               />
               {errors.phone && (
                 <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>
@@ -98,7 +98,7 @@ export function WifiPortal() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary text-secondary font-semibold uppercase tracking-wider px-8 py-3 hover:bg-primary/90 transition-colors disabled:opacity-50 cursor-pointer"
+              className="w-full bg-primary text-secondary font-semibold uppercase tracking-wider px-8 py-4 text-base hover:bg-primary/90 transition-colors disabled:opacity-50 cursor-pointer"
             >
               {isSubmitting ? "Đang xử lý..." : "Kết nối WiFi"}
             </button>
