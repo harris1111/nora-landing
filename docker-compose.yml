@@ -1,0 +1,9 @@
+services:
+  nora-landing:
+    build:
+      context: .
+      args:
+        VITE_GOOGLE_SHEETS_URL: ${VITE_GOOGLE_SHEETS_URL}
+    ports:
+      - "80:80"
+    restart: unless-stopped
