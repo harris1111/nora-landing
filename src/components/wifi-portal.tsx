@@ -38,14 +38,14 @@ export function WifiPortal() {
         <div className="mb-8 text-center">
           <img
             src="/images/logo.png"
-            alt="Imperial Palace"
+            alt="Imperial Da Lat"
             className="h-24 md:h-32 mx-auto mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
           />
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-wider">
-            IMPERIAL PALACE
+            IMPERIAL DA LAT
           </h1>
           <p className="text-white/70 mt-2 text-sm">
-            11 Lê Thánh Tông, Hoàn Kiếm, Hà Nội
+            57-59 Đ. Hùng Vương, Phường Lâm Viên, Lâm Viên - Đà Lạt, Lâm Đồng
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export function WifiPortal() {
 
         {/* Footer */}
         <p className="text-white/30 text-xs mt-8">
-          © 2026 Imperial Palace. All rights reserved.
+          © 2026 Imperial Da Lat. All rights reserved.
         </p>
       </div>
     </div>
