@@ -28,7 +28,7 @@ export function WifiPortal() {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat relative font-sans" style={{ backgroundImage: "url(/images/hero/slide-1.webp)" }}>
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat relative font-sans" style={{ backgroundImage: "url(/images/hero/slide-1.jpg)" }}>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
@@ -39,10 +39,7 @@ export function WifiPortal() {
           <img
             src="/images/logo.png"
             alt="Imperial Palace"
-            className="h-16 md:h-20 mx-auto mb-4"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
+            className="h-24 md:h-32 mx-auto mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
           />
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-wider">
             IMPERIAL PALACE
@@ -53,7 +50,7 @@ export function WifiPortal() {
         </div>
 
         {/* Form card */}
-        <div className="w-full max-w-lg bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-10">
+        <div className="w-full max-w-lg bg-black/70 backdrop-blur-lg border border-white/15 p-8 md:p-10 shadow-2xl">
           <h2 className="text-white text-center text-xl font-semibold uppercase tracking-wider mb-8">
             Đăng ký WiFi
           </h2>
@@ -64,7 +61,7 @@ export function WifiPortal() {
                 {...register("name")}
                 aria-label="Họ và tên"
                 placeholder="Họ và tên *"
-                className="w-full px-5 py-4 text-base bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-5 py-4 text-base bg-white/15 border border-white/25 text-white placeholder-white/60 focus:outline-none focus:border-primary transition-colors"
               />
               {errors.name && (
                 <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
@@ -76,7 +73,7 @@ export function WifiPortal() {
                 {...register("email")}
                 aria-label="Email"
                 placeholder="Email *"
-                className="w-full px-5 py-4 text-base bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-5 py-4 text-base bg-white/15 border border-white/25 text-white placeholder-white/60 focus:outline-none focus:border-primary transition-colors"
               />
               {errors.email && (
                 <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
@@ -88,7 +85,7 @@ export function WifiPortal() {
                 {...register("phone")}
                 aria-label="Số điện thoại"
                 placeholder="Số điện thoại *"
-                className="w-full px-5 py-4 text-base bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-5 py-4 text-base bg-white/15 border border-white/25 text-white placeholder-white/60 focus:outline-none focus:border-primary transition-colors"
               />
               {errors.phone && (
                 <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>

@@ -5,17 +5,19 @@ export async function submitToGoogleSheets(data: Record<string, string>) {
     throw new Error("Google Sheets URL not configured");
   }
 
-  const response = await fetch(SHEETS_URL, {
+  // Use no-cors mode with form data to avoid CORS preflight
+  // Google Apps Script doesn't return readable response in no-cors,
+  // so we assume success if no network error
+  const formData = new FormData();
+  for (const [key, value] of Object.entries(data)) {
+    formData.append(key, value);
+  }
+
+  await fetch(SHEETS_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
+    mode: "no-cors",
+    body: formData,
   });
 
-  if (!response.ok) throw new Error("Submission failed");
-
-  const contentType = response.headers.get("content-type");
-  if (contentType?.includes("application/json")) {
-    return response.json();
-  }
-  return { success: response.ok };
+  return { success: true };
 }
